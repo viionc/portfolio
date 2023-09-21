@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+    <title>Marek Stankiewicz</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/bdfe8b9f48.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="./assets/logo.png">
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <div id="emailModal" class="modal" aria-labelledby="emailModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content shadow">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="emailModalLabel">Success!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Almost. The email would've been sent, but there is no backend implemented.</p>
+                    <p> I'm sure you had something very kind to say so thank you!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="image-modal" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div id="imageModalBody" class="modal-body d-flex justify-content-center">
+                    <button type="button" class="btn-close position-absolute top-0 end-0 fs-2" aria-label="Close"
+                        data-bs-dismiss="modal"></button>
+                    <img>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav id="top-navbar" class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <img src="./assets/logo.png" alt="logo" height="50" width="auto" class="ms-5">
+            <div class="collapse navbar-collapse text-white fs-3 justify-content-end" id="navbarNav">
+                <a href="#landing-page" class="nav-link active text-decoration-none text-white" aria-current="page"
+                    href="#">Home</a>
+                <a class="nav-link text-decoration-none text-white" href="#">About</a>
+                <a href="#projects" class="nav-link text-decoration-none text-white" href="#">Projects</a>
+                <a href="#contact" class="nav-link text-decoration-none text-white" href="#">Contact</a>
+                </ul>
+            </div>
+            <div id="links" class="mx-5">
+                <a target="_blank" href="https://github.com/viionc/"><i class="fa-brands fa-github fa-2xl"
+                        style="color: #ffffff;"></i></a>
+            </div>
+        </div>
+    </nav>
+    <section id="landing-page" class="">
+        <div class="container d-flex flex-row pt-5">
+            <div class="w-50 h-50 d-flex justify-content-center align-items-center">
+                <div class="d-flex flex-column justify-content-center">
+                    <p class="text-info fs-2">Hi, my name is</p>
+                    <p id="name" class="lead fw-bold text-white mb-2">Marek Stankiewicz</p>
+                    <p id="front" class="fs-4 text-white-50">and I focus on building fun projects.</p>
+                </div>
+            </div>
+            <div id="skills" class="position-relative w-50">
+                <div class="container position-absolute top-50 start-50" style="translate: (-50%, -50%)">
+                    <div class="text-white d-flex" style="font-size: 5rem;">
+                        <div id="skills-wrapper" class="d-flex">
+                            <span>[</span>
+                            <div class="wave px-3">
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                            </div>
+                            <span>skills</span>
+                            <span>]</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="container position-absolute top-50 start-50" style="translate: (-50%, -50%)">
+                    <div class="text-white d-flex" style="font-size: 5rem;">
+                        <div id="skills-logos-wrapper" class="d-flex gap-3"
+                            style="font-size: 5rem; translate: (-50%, -50%)">
+                            <span>[</span>
+                            <span><img src="./assets/htmllogo.png" height="50" width="auto" alt="htmllogo">, </span>
+                            <span><img src="./assets/csslogo.png" height="50" width="auto" alt="htmllogo">, </span>
+                            <span><img src="./assets/javascriptlogo.png" height="50" width="auto" alt="htmllogo">,
+                            </span>
+                            <span><img src="./assets/typescriptlogo.png" height="50" width="auto" alt="htmllogo">,
+                            </span>
+                            <span><img src="./assets/reactlogo.png" height="50" width="auto" alt="htmllogo">, </span>
+                            <span><img src="./assets/gitlogo.png" height="50" width="auto" alt="htmllogo"></span>
+                            <span>]</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="projects" class="bg-light py-4">
+        <div id="projects-wrapper" class="container d-flex flex-column gap-5 w-100">
+            <h1 class="">My Projects</h1>
+            <div
+                class="project-container container d-flex flex-row flex-wrap p-5 border border-black rounded shadow justify-content-around bg-white align-items-center">
+                <div class="w-50 fs-4">
+                    <p>Bookord is a real-time chat application.</p>
+                    <p>I used this project to learn how to work with Firestore, a database system provided by Firebase.
+                        App also supports the Firebase Authentication system.</p>
+                    <p>The data is updated in real time and React handles rerendering necessary components. States are
+                        managed by Context API.</p>
+                    <p>For styling, I worked with Bootstrap React components.</p>
+                    <p>The project was deployed to Firebases' Hosting.</p>
+                </div>
+                <div class="">
+                    <div id="bookord-carousel" class="carousel slide" data-bs-interval="false"
+                        style="height:200px; width:400px;">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./assets/bookord.png" class="d-block w-100" style="height:200px; width:300px;"
+                                    alt="bookord">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/bookord2.png" class="d-block w-100"
+                                    style="height:200px; width:300px;" alt="bookord2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/bookord3.png" class="d-block w-100"
+                                    style="height:200px; width:300px;" alt="bookord3">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/bookord4.png" class="d-block w-100"
+                                    style="height:200px; width:300px;" alt="bookord4">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/bookord5.png" class="d-block w-100"
+                                    style="height:200px; width:300px;" alt="bookord5">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#bookord-carousel"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#bookord-carousel"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+
+                    <div class="d-flex justify-content-around mt-4">
+                        <a target="_blank" href="https://github.com/viionc/bookord"><i class="fa-brands fa-github"
+                                style="color: #1a1a1a; font-size: 3.5rem;"></i></a>
+                        <a target="_blank" href="https://bookord.web.app/"
+                            class="text-black text-decoration-none fs-2">Live
+                            Demo</a>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="project-container container d-flex flex-row  p-5 border border-black rounded shadow justify-content-around bg-white">
+                <div class="">
+                    <div id="aimt-tester-carousel" class="carousel slide" data-bs-interval="false"
+                        style="height:200px; width:400px;">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./assets/aimtester.png" class="d-block w-100"
+                                    style="height:200px; width:300px;" alt="aimtester1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/aimtester2.png" class="d-block w-100"
+                                    style="height:200px; width:300px;" alt="aimtester2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/aimtester3.png" class="d-block w-100"
+                                    style="height:200px; width:300px;" alt="aimtester3">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#aimt-tester-carousel"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#aimt-tester-carousel"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    <div class="d-flex justify-content-around mt-4">
+                        <a target="_blank" href="https://github.com/viionc/AimTest"><i class="fa-brands fa-github"
+                                style="color: #1a1a1a; font-size: 3.5rem;"></i></a>
+                        <a target="_blank" href="https://viionc.github.io/AimTest/"
+                            class="text-black text-decoration-none fs-2">Live
+                            Demo</a>
+                    </div>
+                </div>
+                <div class="w-50 fs-4">
+                    <p>An application that tests your aim and reaction time.</p>
+                    <p>Click circles when they appear on your screen, and make sure you are as accurate as possible.
+                        Your game stats are being tracked and displayed when the game ends.</p>
+                    <p>Multiple settings make the game harder.</p>
+                    <p>Application built with Vite and hosted via GitHub Pages.</p>
+                </div>
+            </div>
+            <div
+                class="project-container container d-flex flex-row flex-wrap p-5 border border-black rounded shadow justify-content-around bg-white">
+                <div class="w-50 fs-4">
+                    <p>Clone of a static website I was given as an assignment.</p>
+                    <p>Responsive design allows viewing the page on any device with no issues.</p>
+                    <p>Created with HTML and Bootstrap 5.</p>
+                    <p>Webpage hosted via GitHub Pages.</p>
+                </div>
+                <div class="">
+                    <div id="goverment-carousel" class="carousel carousel-dark slide" data-bs-interval="false"
+                        style="height:200px; width:400px;">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./assets/gov1.png" class="d-block w-100" style="height:200px; width:300px;"
+                                    alt="gov1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/gov2.png" class="d-block w-100" style="height:200px; width:300px;"
+                                    alt="gov2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/gov3.png" class="d-block w-100" style="height:200px; width:300px;"
+                                    alt="gov3">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#goverment-carousel"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#goverment-carousel"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    <div class="d-flex justify-content-around mt-4">
+                        <a target="_blank" href="https://github.com/viionc/zadanie-na-cv"><i class="fa-brands fa-github"
+                                style="color: #1a1a1a; font-size: 3.5rem;"></i></a>
+                        <a target="_blank" href="https://viionc.github.io/zadanie-na-cv/"
+                            class="text-black text-decoration-none fs-2">Live
+                            Demo</a>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="project-container container d-flex flex-row flex-wrap p-5 border border-black rounded shadow justify-content-around bg-white">
+                <div class="">
+                    <div id="slowordle-carousel" class="carousel slide" data-bs-interval="false"
+                        style="height:200px; width:400px;">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./assets/slowordle1.png" class="d-block w-100"
+                                    style="height:200px; width:300px;" alt="slowordle1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/slowordle2.png" class="d-block w-100"
+                                    style="height:200px; width:300px;" alt="slowordle2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/slowordle3.png" class="d-block w-100"
+                                    style="height:200px; width:300px;" alt="slowordle3">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#slowordle-carousel"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#slowordle-carousel"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+
+                    <div class="d-flex justify-content-around mt-4">
+                        <a target="_blank" href="https://github.com/viionc/slowordle"><i class="fa-brands fa-github"
+                                style="color: #1a1a1a; font-size: 3.5rem;"></i></a>
+                        <a target="_blank" href="https://viionc.github.io/slowordle/"
+                            class="text-black text-decoration-none fs-2">Live
+                            Demo</a>
+                    </div>
+                </div>
+                <div class="w-50 fs-4">
+                    <p>Słowordle is a wordle but in Polish.</p>
+                    <p>Guess the word in 6 tries, every time you type a word you will get hints.</p>
+                    <p>Every day there is a new word added, you can also play games from previous days.</p>
+                    <p>Application built with Vite and hosted via GitHub Pages.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="row align-items-stretch justify-content-center g-0">
+            <div class="col-md-7">
+                <div class="form h-100 contact-wrap p-5">
+                    <h3 class="text-center">Let's Talk</h3>
+                    <form class="mb-5" method="post" id="contactForm" name="contactForm" novalidate="novalidate">
+                        <div class="row">
+                            <div class="col-md-6 form-group mb-3">
+                                <label for="" class="col-form-label">Name *</label>
+                                <input type="text" class="form-control" name="contact-name" id="contact-name"
+                                    placeholder="Your name">
+                            </div>
+                            <div class="col-md-6 form-group mb-3">
+                                <label for="" class="col-form-label">Email *</label>
+                                <input type="email" class="form-control" name="email" id="email"
+                                    placeholder="Your email">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 form-group mb-3">
+                                <label for="budget" class="col-form-label">Subject</label>
+                                <input type="text" class="form-control" name="subject" id="subject"
+                                    placeholder="Your subject">
+                            </div>
+                        </div>
+                        <div class="row mb-5">
+                            <div class="col-md-12 form-group mb-3">
+                                <label for="message" class="col-form-label">Message *</label>
+                                <textarea class="form-control" name="message" id="message" cols="30" rows="4"
+                                    placeholder="Write your message"></textarea>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-md-5 form-group text-center">
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#emailModal">
+                                    Send Message
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-dark d-flex justify-content-center align-items-center text-white py-3">
+        © Marek Stankiewicz, all rights reserved.
+    </footer>
+    <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
