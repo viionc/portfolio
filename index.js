@@ -7,6 +7,7 @@ const projectContainers = document.querySelectorAll(".project-container");
 const skills = document.getElementById("skills");
 const skillsWrapper = document.getElementById("skills-wrapper");
 const skillsLogos = document.getElementById("skills-logos-wrapper");
+const projects = document.getElementById("projects");
 
 // carousel
 carouselImages.forEach(imgElement => {
@@ -19,43 +20,28 @@ carouselImages.forEach(imgElement => {
         image.style.width = "90%";
         imageModalBody.querySelector("img").remove();
         imageModalBody.append(image);
-        const myModalAlternative = new bootstrap.Modal("#image-modal", {});
-        myModalAlternative.toggle();
+        const imageModal = new bootstrap.Modal("#image-modal", {});
+        imageModal.toggle();
     };
 });
 
 // scroll
 document.onscroll = () => {
-    if (window.scrollY > 50) {
-        // !topNavbar.classList.contains("fixed-top") ? topNavbar.classList.add("fixed-top") : null;
-        topNavbar.classList.add("fixed-top");
-    } else {
-        topNavbar.classList.remove("fixed-top");
-    }
+    window.scrollY > 50
+        ? topNavbar.classList.add("fixed-top")
+        : topNavbar.classList.remove("fixed-top");
 
-    if (window.scrollY > 400) {
-        document.querySelectorAll(".project-container")[0].classList.add("slide");
-    } else {
-        document.querySelectorAll(".project-container")[0].classList.remove("slide");
-    }
-    if (window.scrollY > 900) {
-        document.querySelectorAll(".project-container")[1].classList.add("slide");
-    } else {
-        document.querySelectorAll(".project-container")[1].classList.remove("slide");
-    }
-    if (window.scrollY > 1400) {
-        document.querySelectorAll(".project-container")[2].classList.add("slide");
-    } else {
-        document.querySelectorAll(".project-container")[2].classList.remove("slide");
-    }
-    if (window.scrollY > 1800) {
-        document.querySelectorAll(".project-container")[3].classList.add("slide");
-    } else {
-        document.querySelectorAll(".project-container")[3].classList.remove("slide");
+    const containerHeight = document.querySelectorAll(".project-container")[0].clientHeight;
+    const projectsHeight = projects.offsetHeight - 400;
+
+    for (let i = 0; i < projectContainers.length; i++) {
+        window.scrollY > projectsHeight + containerHeight * i
+            ? projectContainers[i].classList.add("slide")
+            : projectContainers[i].classList.remove("slide");
     }
 };
 
-skillsWrapper.addEventListener("mouseover", () => {
+skills.addEventListener("mouseover", () => {
     skillsWrapper.style.width = 0;
     skillsLogos.style.width = "100%";
 });

@@ -13,8 +13,8 @@
 </head>
 
 <body>
-    <div id="emailModal" class="modal" aria-labelledby="emailModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
+    <div id="emailModal" class="modal fade" tabindex="-1" aria-labelledby="emailModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered ">
             <div class="modal-content shadow">
                 <div class="modal-header">
                     <h5 class="modal-title" id="emailModalLabel">Success!</h5>
@@ -27,7 +27,7 @@
             </div>
         </div>
     </div>
-    <div id="image-modal" class="modal">
+    <div id="image-modal" class="modal fade">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div id="imageModalBody" class="modal-body d-flex justify-content-center">
@@ -60,16 +60,17 @@
         </div>
     </nav>
     <section id="landing-page" class="">
-        <div class="container d-flex flex-row pt-5">
-            <div class="w-50 h-50 d-flex justify-content-center align-items-center">
-                <div class="d-flex flex-column justify-content-center">
-                    <p class="text-info fs-2">Hi, my name is</p>
-                    <p id="name" class="lead fw-bold text-white mb-2">Marek Stankiewicz</p>
-                    <p id="front" class="fs-4 text-white-50">and I focus on building fun projects.</p>
+        <div class="container d-flex flex-row pt-5 h-100 flex-wrap">
+            <div class="w-50 d-flex h-75 align-items-center">
+                <div class="d-flex flex-column ">
+                    <p class="fs-2 text-white mb-0">Hi, my name is</p>
+                    <p id="name" class="lead fw-bold text-info">Marek Stankiewicz</p>
+                    <p id="front" class="fs-4 text-white-50">and I'm a <span class="text-info">Frontend
+                            Developer</span>. Highly dedicated and hardworking.</p>
                 </div>
             </div>
-            <div id="skills" class="position-relative w-50">
-                <div class="container position-absolute top-50 start-50" style="translate: (-50%, -50%)">
+            <div id="skills" class="position-relative w-50  h-75 ">
+                <div class="container position-absolute top-50 start-50" style="transform:translate(-50%, -50%);">
                     <div class="text-white d-flex" style="font-size: 5rem;">
                         <div id="skills-wrapper" class="d-flex">
                             <span>[</span>
@@ -83,7 +84,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="container position-absolute top-50 start-50" style="translate: (-50%, -50%)">
+                <div class="container position-absolute top-50 start-50" style="transform: translate(-50%, -50%);">
                     <div class="text-white d-flex" style="font-size: 5rem;">
                         <div id="skills-logos-wrapper" class="d-flex gap-3"
                             style="font-size: 5rem; translate: (-50%, -50%)">
@@ -103,9 +104,27 @@
             </div>
         </div>
     </section>
+    <section id="about">
+        <div class="container text-white py-5 h-100 d-flex justify-content-center align-items-center flex-column gap-3">
+            <h2>About me</h2>
+            <p class="fs-2">I'm looking for a <span class="text-info fw-bold">Junior Frontend Developer</span> position.
+                I strive to improve my skills
+                every day. I look forward to working with experienced people from whom I can
+                absorb knowledge and put it to use myself.
+            </p>
+            <p class="fs-2">I focus more on logic part of develpoment. Optimizing functions or introducing new solutions
+                to old projects that I learned along the way is what I enjoy the most.
+                The possiblity of <span class="text-info fw-bold">constant improvement</span> is what keeps me
+                interested in this field.
+            </p>
+            <p class="fs-2">If you are in need of someone who is
+                ambitious, responsible, a fast learner, and very proficient in using Google I am the
+                perfect candidate. </p>
+        </div>
+    </section>
     <section id="projects" class="bg-light py-4">
         <div id="projects-wrapper" class="container d-flex flex-column gap-5 w-100">
-            <h1 class="">My Projects</h1>
+            <h2 class="">My Projects</h2>
             <div
                 class="project-container container d-flex flex-row flex-wrap p-5 border border-black rounded shadow justify-content-around bg-white align-items-center">
                 <div class="w-50 fs-4">

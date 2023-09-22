@@ -5,10 +5,10 @@ body {
 #landing-page {
     height: 100vh;
     width: 100%;
-    background: linear-gradient(#0a192f, #081425);
+    background: linear-gradient(#081425, #0d1e38);
 }
 nav {
-    background-color: #0a192f;
+    background-color: #081425;
 }
 #name {
     font-size: 4.5rem;
@@ -17,10 +17,10 @@ nav {
 a:hover {
     opacity: 0.7;
 }
-/* 
-@media screen and (max-width: 600px){
-    #project-container:
-} */
+#about {
+    background: linear-gradient(#3c4c63, #5b6f8a);
+    height: 1200px;
+}
 
 #image-modal .modal-dialog {
     max-width: 80vw;
@@ -87,7 +87,7 @@ a:hover {
     white-space: nowrap;
     /* padding: 25px 0; */
     overflow: hidden;
-    transition: 0.7s all;
+    transition: 0.5s all;
     z-index: 2;
 }
 
@@ -102,3 +102,8 @@ a:hover {
     transition: 0.7s all;
     transition-delay: 1s;
 }
+/* @media (prefers-reduced-motion: reduce) {
+    .fade {
+        transition: none;
+    }
+} */
