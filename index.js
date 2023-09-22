@@ -52,7 +52,6 @@ setInterval(() => {
     if (!flag) {
         skillsWrapper.style.transitionDelay = "0s";
         skillsLogos.style.transitionDelay = "1s";
-        skillsLogos.style.display = "flex";
         skillsWrapper.style.width = 0;
         skillsLogos.style.width = "100%";
         flag = true;
