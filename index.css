@@ -59,16 +59,10 @@ a:hover {
 .project-container {
     transition: all 0.5s ease;
 }
-.project-container:nth-child(2) {
+.project-container:nth-child(odd):not(h2) {
     transform: translateX(-100%);
 }
-.project-container:nth-child(3) {
-    transform: translateX(100%);
-}
-.project-container:nth-child(4) {
-    transform: translateX(-100%);
-}
-.project-container:nth-child(5) {
+.project-container:nth-child(even) {
     transform: translateX(100%);
 }
 

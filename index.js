@@ -33,7 +33,7 @@ document.onscroll = () => {
         : topNavbar.classList.remove("fixed-top");
 
     const containerHeight = document.querySelectorAll(".project-container")[0].clientHeight;
-    const projectsHeight = projects.offsetHeight - 400;
+    const projectsHeight = projects.offsetHeight - 800;
 
     for (let i = 0; i < projectContainers.length; i++) {
         window.scrollY > projectsHeight + containerHeight * i
