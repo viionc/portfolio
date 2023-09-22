@@ -85,7 +85,6 @@ a:hover {
     display: flex;
     justify-content: center;
     white-space: nowrap;
-    /* padding: 25px 0; */
     overflow: hidden;
     transition: 0.5s all;
     z-index: 2;
@@ -97,13 +96,6 @@ a:hover {
     display: flex;
     justify-content: center;
     white-space: nowrap;
-    /* padding: 25px 0; */
     overflow: hidden;
     transition: 0.7s all;
-    transition-delay: 1s;
 }
-/* @media (prefers-reduced-motion: reduce) {
-    .fade {
-        transition: none;
-    }
-} */

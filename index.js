@@ -8,6 +8,7 @@ const skills = document.getElementById("skills");
 const skillsWrapper = document.getElementById("skills-wrapper");
 const skillsLogos = document.getElementById("skills-logos-wrapper");
 const projects = document.getElementById("projects");
+const aboutParagraphs = document.querySelectorAll("#about p");
 
 // carousel
 carouselImages.forEach(imgElement => {
@@ -41,7 +42,25 @@ document.onscroll = () => {
     }
 };
 
-skills.addEventListener("mouseover", () => {
-    skillsWrapper.style.width = 0;
-    skillsLogos.style.width = "100%";
-});
+// skills.addEventListener("mouseover", () => {
+//     skillsWrapper.style.width = 0;
+//     skillsLogos.style.width = "100%";
+// });
+
+let flag = false;
+setInterval(() => {
+    if (!flag) {
+        skillsWrapper.style.transitionDelay = "0s";
+        skillsLogos.style.transitionDelay = "1s";
+        skillsLogos.style.display = "flex";
+        skillsWrapper.style.width = 0;
+        skillsLogos.style.width = "100%";
+        flag = true;
+    } else {
+        skillsWrapper.style.transitionDelay = "1s";
+        skillsLogos.style.transitionDelay = "0s";
+        skillsWrapper.style.width = "100%";
+        skillsLogos.style.width = 0;
+        flag = false;
+    }
+}, 4000);
