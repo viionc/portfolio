@@ -8,7 +8,7 @@ const skills = document.getElementById("skills");
 const skillsWrapper = document.getElementById("skills-wrapper");
 const skillsLogos = document.getElementById("skills-logos-wrapper");
 const projects = document.getElementById("projects");
-const aboutParagraphs = document.querySelectorAll("#about p");
+const about = document.querySelector("#about");
 
 // carousel
 carouselImages.forEach(imgElement => {
@@ -63,3 +63,12 @@ setInterval(() => {
         flag = false;
     }
 }, 4000);
+
+about.querySelectorAll(".paragraph-wrapper").forEach(paragraph => {
+    paragraph.addEventListener("mouseover", () => {
+        paragraph.querySelector(".bar").style.minWidth = "5px";
+    });
+    paragraph.addEventListener("mouseout", () => {
+        paragraph.querySelector(".bar").style.minWidth = "0px";
+    });
+});
