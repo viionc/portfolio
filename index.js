@@ -42,13 +42,17 @@ document.onscroll = () => {
     }
 };
 
-// skills.addEventListener("mouseover", () => {
-//     skillsWrapper.style.width = 0;
-//     skillsLogos.style.width = "100%";
-// });
+about.querySelectorAll(".paragraph-wrapper").forEach(paragraph => {
+    paragraph.addEventListener("mouseover", () => {
+        paragraph.querySelector(".bar").style.minWidth = "5px";
+    });
+    paragraph.addEventListener("mouseout", () => {
+        paragraph.querySelector(".bar").style.minWidth = "0px";
+    });
+});
 
 let flag = false;
-setInterval(() => {
+const skillsAnimation = () => {
     if (!flag) {
         skillsWrapper.style.transitionDelay = "0s";
         skillsLogos.style.transitionDelay = "1s";
@@ -62,13 +66,6 @@ setInterval(() => {
         skillsLogos.style.width = 0;
         flag = false;
     }
-}, 4000);
-
-about.querySelectorAll(".paragraph-wrapper").forEach(paragraph => {
-    paragraph.addEventListener("mouseover", () => {
-        paragraph.querySelector(".bar").style.minWidth = "5px";
-    });
-    paragraph.addEventListener("mouseout", () => {
-        paragraph.querySelector(".bar").style.minWidth = "0px";
-    });
-});
+    setTimeout(skillsAnimation, 4000);
+};
+setTimeout(skillsAnimation, 1000);
