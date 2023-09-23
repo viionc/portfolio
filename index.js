@@ -32,14 +32,17 @@ document.onscroll = () => {
         ? topNavbar.classList.add("fixed-top")
         : topNavbar.classList.remove("fixed-top");
 
-    const containerHeight = document.querySelectorAll(".project-container")[0].clientHeight;
-    const projectsHeight = projects.offsetHeight - 800;
+    // const projectsHeight =
+    //     document.documentElement.scrollTop + projects.getBoundingClientRect().top - 500;
 
-    for (let i = 0; i < projectContainers.length; i++) {
-        window.scrollY > projectsHeight + containerHeight * i
-            ? projectContainers[i].classList.add("slide")
-            : projectContainers[i].classList.remove("slide");
-    }
+    // for (let i = 0; i < projectContainers.length; i++) {
+    //     const containerHeight =
+    //         document.documentElement.scrollTop +
+    //         document.querySelectorAll(".project-container")[i].getBoundingClientRect().top;
+    //     window.scrollY > containerHeight - 400
+    //         ? projectContainers[i].classList.add("slide")
+    //         : projectContainers[i].classList.remove("slide");
+    // }
 };
 
 about.querySelectorAll(".paragraph-wrapper").forEach(paragraph => {
@@ -69,3 +72,16 @@ const skillsAnimation = () => {
     setTimeout(skillsAnimation, 4000);
 };
 setTimeout(skillsAnimation, 1000);
+
+const observerOptions = {};
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+            entry.target.classList.remove("slide");
+        } else {
+            entry.target.classList.toggle("slide");
+        }
+    });
+}, observerOptions);
+
+document.querySelectorAll(".project-container").forEach(elem => observer.observe(elem));
