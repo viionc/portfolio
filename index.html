@@ -152,6 +152,7 @@
                     <p>The data is updated in real time and React handles rerendering necessary components. States are
                         managed by Context API.</p>
                     <p>For styling, I worked with Bootstrap React components.</p>
+                    <p>Demo is setup on free account, so the API calls are limited.</p>
                     <p>The project was deployed to Firebases' Hosting.</p>
                 </div>
                 <div class="">
@@ -197,7 +198,64 @@
                 </div>
             </div>
             <div
+                class="project-container container d-flex flex-row flex-wrap p-5 border border-black rounded shadow justify-content-around bg-white align-items-center">
+
+                <div class="">
+                    <div id="image-gallery-carousel" class="carousel slide" data-bs-interval="false"
+                        style="height:200px; width:400px;">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./assets/imagegallery1.png" class="d-block w-100"
+                                    style="height:200px; width:300px;" alt="imagegallery1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/imagegallery2.png" class="d-block w-100"
+                                    style="height:200px; width:300px;" alt="imagegallery2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/imagegallery3.png" class="d-block w-100"
+                                    style="height:200px; width:300px;" alt="imagegallery3">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#image-gallery-carousel"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#image-gallery-carousel"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+
+                    <div class="d-flex justify-content-around mt-4">
+                        <a target="_blank" href="https://github.com/viionc/image-gallery/" aria-label="github"
+                            class="projects-button source d-flex align-items-center">Source <i
+                                class="fa-brands fa-github" style="color: #1a1a1a; font-size: 3.5rem;"></i></a>
+                        <a target="_blank" href="https://image-gallery-beta-woad.vercel.app/gallery" aria-label="github"
+                            class="projects-button demo d-flex align-items-center">Demo</a>
+                    </div>
+                </div>
+                <div class="w-50 fs-4">
+                    <p>A Fullstack Image Gallery App.</p>
+                    <p>Upload and storage provided by Cloudinary, backend coded in NextJS.</p>
+                    <p>Cloudinary adds an option to apply filters to an image, including generative fill which will
+                        expand an image with AI generated content.</p>
+                    <p>You can upload your own images and store them in albums.</p>
+                    <p>The project was deployed using Vercel.</p>
+                </div>
+            </div>
+            <div
                 class="project-container container d-flex flex-row  p-5 border border-black rounded shadow justify-content-around bg-white">
+                <div class="w-50 fs-4">
+                    <p>E-commerce app for furniture.</p>
+                    <p>Browse selection of the best quality furniture, click cards to see products information, add
+                        items to cart.</p>
+                    <p>Cart data is stored in your local storage. React Routes allow you to jump between pages.</p>
+                    <p>Application built with Vite and hosted via GitHub Pages. Used Bootstrap for React for styling.
+                    </p>
+                </div>
                 <div class="">
                     <div id="furniture-shop-carousel" class="carousel slide carousel-dark" data-bs-interval="false"
                         style="height:200px; width:400px;">
@@ -234,23 +292,11 @@
                             class="projects-button demo d-flex align-items-center">Demo</a>
                     </div>
                 </div>
-                <div class="w-50 fs-4">
-                    <p>E-commerce app for furniture.</p>
-                    <p>Browse selection of the best quality furniture, click cards to see products information, add
-                        items to cart.</p>
-                    <p>Cart data is stored in your local storage. React Routes allow you to jump between pages.</p>
-                    <p>Application built with Vite and hosted via GitHub Pages. Used Bootstrap for React for styling.
-                    </p>
-                </div>
+
             </div>
             <div
                 class="project-container container d-flex flex-row  p-5 border border-black rounded shadow justify-content-around bg-white">
-                <div class="w-50 fs-4">
-                    <p>Anime Search uses Jikan REST API to fetch shows with selected filters.</p>
-                    <p>Top 10 shows are fetched on page load.</p>
-                    <p>You can combine all filters to narrow down your searches</p>
-                    <p>Application built with React and hosted via GitHub Pages.</p>
-                </div>
+
                 <div class="">
                     <div id="anime-search-carousel" class="carousel slide" data-bs-interval="false"
                         style="height:200px; width:400px;">
@@ -287,10 +333,22 @@
                             class="projects-button demo d-flex align-items-center">Demo</a>
                     </div>
                 </div>
+                <div class="w-50 fs-4">
+                    <p>Anime Search uses Jikan REST API to fetch shows with selected filters.</p>
+                    <p>Top 10 shows are fetched on page load.</p>
+                    <p>You can combine all filters to narrow down your searches</p>
+                    <p>Application built with React and hosted via GitHub Pages.</p>
+                </div>
             </div>
             <div
                 class="project-container container d-flex flex-row  p-5 border border-black rounded shadow justify-content-around bg-white">
-
+                <div class="w-50 fs-4">
+                    <p>An application that tests your aim and reaction time.</p>
+                    <p>Click circles when they appear on your screen, and make sure you are as accurate as possible.
+                        Your game stats are being tracked and displayed when the game ends.</p>
+                    <p>Multiple settings make the game harder.</p>
+                    <p>Application built with Vite and hosted via GitHub Pages.</p>
+                </div>
                 <div class="">
                     <div id="aimt-tester-carousel" class="carousel slide" data-bs-interval="false"
                         style="height:200px; width:400px;">
@@ -327,22 +385,11 @@
                             class="projects-button demo d-flex align-items-center">Demo</a>
                     </div>
                 </div>
-                <div class="w-50 fs-4">
-                    <p>An application that tests your aim and reaction time.</p>
-                    <p>Click circles when they appear on your screen, and make sure you are as accurate as possible.
-                        Your game stats are being tracked and displayed when the game ends.</p>
-                    <p>Multiple settings make the game harder.</p>
-                    <p>Application built with Vite and hosted via GitHub Pages.</p>
-                </div>
+
             </div>
             <div
                 class="project-container container d-flex flex-row flex-wrap p-5 border border-black rounded shadow justify-content-around bg-white">
-                <div class="w-50 fs-4">
-                    <p>Clone of a static website I was given as an assignment.</p>
-                    <p>Responsive design allows viewing the page on any device with no issues.</p>
-                    <p>Created with HTML and Bootstrap 5.</p>
-                    <p>Webpage hosted via GitHub Pages.</p>
-                </div>
+
                 <div class="">
                     <div id="goverment-carousel" class="carousel carousel-dark slide" data-bs-interval="false"
                         style="height:200px; width:400px;">
@@ -379,11 +426,21 @@
                             class="projects-button demo d-flex align-items-center">Demo</a>
                     </div>
                 </div>
-
+                <div class="w-50 fs-4">
+                    <p>Clone of a static website I was given as an assignment.</p>
+                    <p>Responsive design allows viewing the page on any device with no issues.</p>
+                    <p>Created with HTML and Bootstrap 5.</p>
+                    <p>Webpage hosted via GitHub Pages.</p>
+                </div>
             </div>
             <div
                 class="project-container container d-flex flex-row flex-wrap p-5 border border-black rounded shadow justify-content-around bg-white">
-
+                <div class="w-50 fs-4">
+                    <p>Słowordle is a wordle but in Polish.</p>
+                    <p>Guess the word in 6 tries, every time you type a word you will get hints.</p>
+                    <p>Every day there is a new word added, you can also play games from previous days.</p>
+                    <p>Application built with Vite and hosted via GitHub Pages.</p>
+                </div>
                 <div class="">
                     <div id="slowordle-carousel" class="carousel slide" data-bs-interval="false"
                         style="height:200px; width:400px;">
@@ -421,12 +478,7 @@
                             class="projects-button demo d-flex align-items-center">Demo</a>
                     </div>
                 </div>
-                <div class="w-50 fs-4">
-                    <p>Słowordle is a wordle but in Polish.</p>
-                    <p>Guess the word in 6 tries, every time you type a word you will get hints.</p>
-                    <p>Every day there is a new word added, you can also play games from previous days.</p>
-                    <p>Application built with Vite and hosted via GitHub Pages.</p>
-                </div>
+
             </div>
         </div>
     </section>
