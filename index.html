@@ -105,11 +105,12 @@
         </div>
     </section>
     <section id="about">
-        <div class="container text-white py-5 h-100 d-flex justify-content-center align-items-center flex-column gap-3">
+        <div
+            class="container text-white py-5 h-100 d-flex justify-content-center align-items-center flex-column gap-3 fs-3">
             <h2>About me</h2>
-            <div class="paragraph-wrapper d-flex">
+            <div class="paragraph-wrapper d-flex ">
                 <div class="bar bg-info me-3"></div>
-                <p class="fs-2">I'm looking for a <span class="text-info fw-bold">Junior Frontend Developer</span>
+                <p>I'm looking for a <span class="text-info fw-bold">Junior Frontend Developer</span>
                     position.
                     I strive to improve my skills
                     every day. I look forward to working with experienced people from whom I can
@@ -118,7 +119,7 @@
             </div>
             <div class="paragraph-wrapper d-flex">
                 <div class="bar bg-info me-3"></div>
-                <p class="fs-2">I focus more on the logic part of development. Optimizing functions or introducing new
+                <p>I focus more on the logic part of development. Optimizing functions or introducing new
                     solutions to old projects that I learned along the way is what I enjoy the most. The possibility of
                     <span class="text-info fw-bold">constant improvement</span> is what keeps me interested in this
                     field.
@@ -126,14 +127,14 @@
             </div>
             <div class="paragraph-wrapper d-flex">
                 <div class="bar bg-info me-3"></div>
-                <p class="fs-2">While I may be a junior developer, I'm enthusiastic and ready to contribute to projects
+                <p>While I may be a junior developer, I'm enthusiastic and ready to contribute to projects
                     and
                     help bring
                     ideas to life.</p>
             </div>
             <div class="paragraph-wrapper d-flex">
                 <div class="bar bg-info me-3"></div>
-                <p class="fs-2">If you are in need of someone who is
+                <p>If you are in need of someone who is
                     ambitious, responsible, a fast learner, and very proficient in using Google I am the
                     <span class="text-info fw-bold">perfect candidate.</span>
                 </p>
@@ -146,14 +147,14 @@
             <div
                 class="project-container container d-flex flex-row flex-wrap p-5 border border-black rounded shadow justify-content-around bg-white align-items-center">
                 <div class="w-50 fs-4">
-                    <p>Bookord is a real-time chat application.</p>
+                    <p>Bookord is a Fullstack, real-time chat application.</p>
                     <p>I used this project to learn how to work with Firestore, a database system provided by Firebase.
                         App also supports the Firebase Authentication system.</p>
                     <p>The data is updated in real time and React handles rerendering necessary components. States are
-                        managed by Context API.</p>
+                        managed by Context API and reducer hook.</p>
                     <p>For styling, I worked with Bootstrap React components.</p>
                     <p>Demo is setup on free account, so the API calls are limited.</p>
-                    <p>The project was deployed to Firebases' Hosting.</p>
+                    <p>The project was deployed to Firebase's Hosting.</p>
                 </div>
                 <div class="">
                     <div id="bookord-carousel" class="carousel slide" data-bs-interval="false"
@@ -488,7 +489,8 @@
             <div class="col-md-7">
                 <div class="form h-100 contact-wrap p-5">
                     <h3 class="text-center">Let's Talk</h3>
-                    <form class="mb-5" method="post" id="contactForm" name="contactForm" novalidate="novalidate">
+                    <form class="mb-5" method="post" id="contactForm" name="contactForm" novalidate="novalidate"
+                        action="https://formspree.io/f/xjvqanga">
                         <div class="row">
                             <div class="col-md-6 form-group mb-3">
                                 <label for="" class="col-form-label">Name *</label>
@@ -517,8 +519,7 @@
                         </div>
                         <div class="row justify-content-center">
                             <div class="col-md-5 form-group text-center">
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                    data-bs-target="#emailModal">
+                                <button type="submit" class="btn btn-primary">
                                     Send Message
                                 </button>
                             </div>
